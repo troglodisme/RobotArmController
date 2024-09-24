@@ -7,53 +7,241 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["GridMaterial", "Sphere"]
+    reorder nameChildren = ["RobotArm", "Material", "MaterialDark", "Rotate", "MaterialOrange"]
     rel material:binding = None (
         bindMaterialAs = "weakerThanDescendants"
     )
 
-    def Sphere "Sphere" (
+    def "RobotArm" (
         active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (1.570796, -15.707962, 3.141593)
+        }
+        references = @RobotArm.usdz@
     )
     {
-        rel material:binding = </Root/GridMaterial/GridMaterial> (
-            bindMaterialAs = "weakerThanDescendants"
-        )
-        double radius = 0.05
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0, 0, 0.0004)
+        quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (0, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def RealityKitComponent "Collider"
+        over "Base" (
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
+        )
         {
-            uint group = 1
-            uniform token info:id = "RealityKit.Collider"
-            uint mask = 4294967295
-            token type = "Default"
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-            def RealityKitStruct "Shape"
+            over "Cylinder_002" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (0, 0, 0)
+                }
+            )
             {
-                float3 extent = (0.2, 0.2, 0.2)
-                float radius = 0.05
-                token shapeType = "Sphere"
+                rel material:binding = </Root/MaterialDark> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                quatf xformOp:orient = (1, 0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "AnimationLibrary"
+                {
+                    uniform token info:id = "RealityKit.AnimationLibrary"
+                }
+            }
+
+            over "Arm_1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (-2.0793371e-15, 4.0008648e-16, 4.2509413)
+                }
+            )
+            {
+                rel material:binding = </Root/RobotArm/Materials/defaultMaterial> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                quatf xformOp:orient = (-0.5266667, 3.7750774e-16, -9.891492e-16, 0.85007185)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                over "Cylinder_001" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                    customData = {
+                        float3 rotationEulerHint = (0, 0, 0)
+                    }
+                )
+                {
+                    rel material:binding = </Root/MaterialDark> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def RealityKitComponent "AnimationLibrary"
+                    {
+                        uniform token info:id = "RealityKit.AnimationLibrary"
+                    }
+                }
+
+                over "Arm_2" (
+                    customData = {
+                        float3 rotationEulerHint = (0, 0, 0)
+                    }
+                )
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    over "Cylinder_003" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                        customData = {
+                            float3 rotationEulerHint = (0, 0, 0)
+                        }
+                    )
+                    {
+                        rel material:binding = </Root/Material> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    over "Wrist"
+                    {
+                        over "Cylinder_007" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </Root/Material> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+
+                        over "Claw_1"
+                        {
+                            over "Cylinder_010" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </Root/MaterialOrange> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+                        }
+
+                        over "Claw_2"
+                        {
+                            over "Cylinder_011" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </Root/MaterialOrange> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+                        }
+                    }
+                }
             }
         }
 
-        def RealityKitComponent "InputTarget"
+        def RealityKitComponent "AnimationLibrary"
         {
-            uniform token info:id = "RealityKit.InputTarget"
+            uniform token info:id = "RealityKit.AnimationLibrary"
+        }
+
+        over "Materials"
+        {
+            over "defaultMaterial"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+
+                over "Shader"
+                {
+                    color3f inputs:diffuseColor = (0.026412247, 0.46135616, 0) (
+                        colorSpace = "srgb_displayp3"
+                    )
+                }
+            }
         }
     }
 
-    def "GridMaterial" (
-        active = true
-        prepend references = @Materials/GridMaterial.usda@
-    )
+    def Material "MaterialDark"
     {
-        float3 xformOp:scale = (1, 1, 1)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        token outputs:mtlx:surface
+        token outputs:realitykit:vertex
+        token outputs:surface.connect = </Root/MaterialDark/UsdPreviewSurface.outputs:surface>
+
+        def Shader "UsdPreviewSurface"
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            color3f inputs:diffuseColor = (0, 0, 0) (
+                colorSpace = "srgb_displayp3"
+            )
+            float inputs:occlusion = 0.5
+            float inputs:opacity = 1
+            token outputs:surface
+        }
+    }
+
+    def Material "Material"
+    {
+        token outputs:mtlx:surface
+        token outputs:realitykit:vertex
+        prepend token outputs:surface.connect = </Root/Material/UsdPreviewSurface.outputs:surface>
+
+        def Shader "UsdPreviewSurface"
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            color3f inputs:diffuseColor = (0.1175298, 0.1175298, 0.1175298) (
+                colorSpace = "srgb_displayp3"
+            )
+            token outputs:surface
+        }
+    }
+
+    def RealityKitTimeline "Rotate"
+    {
+        reorder nameChildren = ["Track2", "Track3", "Track"]
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Spin"
+            {
+                string actionKind = "spin"
+                int blendLayer = 400
+                double duration = 1
+                uniform token info:id = "9B1B0B36-074C-418F-ADE2-B4F8CC1557A4"
+                float3 localAxis = (0, 0, 1)
+                double startTime = 0
+                rel target = </Root/RobotArm/Base/Arm_1>
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+        }
+    }
+
+    def Material "MaterialOrange"
+    {
+        token outputs:mtlx:surface
+        token outputs:realitykit:vertex
+        token outputs:surface.connect = </Root/MaterialOrange/UsdPreviewSurface.outputs:surface>
+
+        def Shader "UsdPreviewSurface"
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            color3f inputs:diffuseColor = (0.99999994, 0.41105154, 0.00728326) (
+                colorSpace = "srgb_displayp3"
+            )
+            float inputs:metallic = 0.5
+            token outputs:surface
+        }
     }
 }
 
