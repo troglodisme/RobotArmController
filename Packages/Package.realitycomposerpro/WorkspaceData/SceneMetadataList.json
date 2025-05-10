@@ -1,0 +1,114 @@
+{
+  "8D38AA4C-B453-46DA-83CA-AE20275CB706" : {
+    "objectMetadataList" : [
+      [
+        "8D38AA4C-B453-46DA-83CA-AE20275CB706",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "8D38AA4C-B453-46DA-83CA-AE20275CB706",
+        "Root",
+        "RAG_SM_Main_RobotArm_v01",
+        "Base",
+        "Arm1"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "8D38AA4C-B453-46DA-83CA-AE20275CB706",
+        "Root",
+        "RAG_SM_Main_RobotArm_v01"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "8D38AA4C-B453-46DA-83CA-AE20275CB706",
+        "Root",
+        "RAG_SM_Main_RobotArm_v01",
+        "Base",
+        "Arm1",
+        "Arm2",
+        "Arm3",
+        "Arm4",
+        "Arm5",
+        "Arm6"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "8D38AA4C-B453-46DA-83CA-AE20275CB706",
+        "Root",
+        "RAG_SM_Main_RobotArm_v01",
+        "Base",
+        "Arm1",
+        "Arm2",
+        "Arm3"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "8D38AA4C-B453-46DA-83CA-AE20275CB706",
+        "Root",
+        "RAG_SM_Main_RobotArm_v01",
+        "Base",
+        "Arm1",
+        "Arm2",
+        "Arm3",
+        "Arm4"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "8D38AA4C-B453-46DA-83CA-AE20275CB706",
+        "Root",
+        "RAG_SM_Main_RobotArm_v01",
+        "Base"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "8D38AA4C-B453-46DA-83CA-AE20275CB706",
+        "Root",
+        "RAG_SM_Main_RobotArm_v01",
+        "Base",
+        "Arm1",
+        "Arm2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "8D38AA4C-B453-46DA-83CA-AE20275CB706",
+        "Root",
+        "RAG_SM_Main_RobotArm_v01",
+        "Base",
+        "Arm1",
+        "Arm2",
+        "Arm3",
+        "Arm4",
+        "Arm5"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}

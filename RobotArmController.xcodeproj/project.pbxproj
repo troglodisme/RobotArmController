@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EA2782A2CA8378D00B89A1A /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA278252CA8378D00B89A1A /* Package.swift */; };
+		4EA2782B2CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA278272CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.swift */; };
+		4EA2782C2CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.rkassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA278262CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.rkassets */; };
+		4EA2782D2CA8378D00B89A1A /* Package.realitycomposerpro in Resources */ = {isa = PBXBuildFile; fileRef = 4EA278242CA8378D00B89A1A /* Package.realitycomposerpro */; };
 		4ECF7EFC2CA1822F00FBA47A /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECF7EFB2CA1822F00FBA47A /* RealityKitContent */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +25,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EA278242CA8378D00B89A1A /* Package.realitycomposerpro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Package.realitycomposerpro; sourceTree = "<group>"; };
+		4EA278252CA8378D00B89A1A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		4EA278262CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.rkassets */ = {isa = PBXFileReference; lastKnownFileType = folder.rkassets; path = RAG_RC_Main_RobotArm_v01.rkassets; sourceTree = "<group>"; };
+		4EA278272CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAG_RC_Main_RobotArm_v01.swift; sourceTree = "<group>"; };
 		4ECF7EF62CA1822F00FBA47A /* RobotArmController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotArmController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECF7EFA2CA1822F00FBA47A /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		4ECF7F0B2CA1823100FBA47A /* RobotArmControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobotArmControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EA278282CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01 */ = {
+			isa = PBXGroup;
+			children = (
+				4EA278262CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.rkassets */,
+				4EA278272CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.swift */,
+			);
+			path = RAG_RC_Main_RobotArm_v01;
+			sourceTree = "<group>";
+		};
+		4EA278292CA8378D00B89A1A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4EA278282CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01 */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		4ECF7EED2CA1822F00FBA47A = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +118,9 @@
 		4ECF7EF92CA1822F00FBA47A /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				4EA278242CA8378D00B89A1A /* Package.realitycomposerpro */,
+				4EA278252CA8378D00B89A1A /* Package.swift */,
+				4EA278292CA8378D00B89A1A /* Sources */,
 				4ECF7EFA2CA1822F00FBA47A /* RealityKitContent */,
 			);
 			path = Packages;
@@ -191,6 +219,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA2782C2CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.rkassets in Resources */,
+				4EA2782D2CA8378D00B89A1A /* Package.realitycomposerpro in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +238,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA2782A2CA8378D00B89A1A /* Package.swift in Sources */,
+				4EA2782B2CA8378D00B89A1A /* RAG_RC_Main_RobotArm_v01.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

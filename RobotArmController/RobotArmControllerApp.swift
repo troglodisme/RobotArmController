@@ -36,11 +36,13 @@ struct RobotArmControllerApp: App {
         WindowGroup() {
             ContentView()
         }
+        .defaultSize(CGSize(width: 300, height: 400))
+
 
 
         // Definition of the Immersive Space.
         ImmersiveSpace(id: "MyImmersiveSpaceID") {
-            ImmersiveSpaceView()
+            ImmersiveSpaceView2()
         }
     }
     
